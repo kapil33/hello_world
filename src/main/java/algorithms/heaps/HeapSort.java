@@ -20,8 +20,7 @@ public class HeapSort {
     }
 
     private void insertKey(int key) {
-        heapSize++;
-        int i = heapSize-1;
+        int i = ++heapSize-1;
         minHeap[i] = key;
         while (i > 0 && minHeap[getParent(i)] > minHeap[i]){
             swap(minHeap, getParent(i), i);
@@ -49,8 +48,7 @@ public class HeapSort {
         if (heapSize == 1)
             return minHeap[--heapSize];
         int result = minHeap[0];
-        minHeap[0] = minHeap[heapSize-1];
-        heapSize--;
+        minHeap[0] = minHeap[heapSize---1];
         heapify(0);
         return result;
     }
