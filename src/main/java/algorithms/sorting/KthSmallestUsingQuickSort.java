@@ -35,7 +35,8 @@ public class KthSmallestUsingQuickSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{12, 3, 5, 7, 4, 19, 26};
+        //int[] arr = new int[]{12, 3, 5, 7, 4, 19, 26};
+        int[] arr = {-12, -11, -13, -5, -6, -7};
         KthSmallestUsingQuickSort find = new KthSmallestUsingQuickSort();
         System.out.println(find.KthSmallest(arr, 0, arr.length-1, 3));
     }

@@ -7,7 +7,8 @@ import java.util.List;
 public class MaximizeOnes {
 
     /*
-    *Problem Statement: Given a binary array and an integer m, find the position of zeroes flipping which creates maximum number of consecutive 1’s in array.
+    *Problem Statement: Given a binary array and an integer m,
+    * find the position of zeroes flipping which creates maximum number of consecutive 1’s in array.
     *
     * Examples :
         Input:   arr[] = {1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1}

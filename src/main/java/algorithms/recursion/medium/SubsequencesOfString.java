@@ -7,11 +7,12 @@ public class SubsequencesOfString {
 
     public static void findSubsequence(String input, String output){
         if (input.isEmpty()){
-            result.add(output);
+            if (!output.isEmpty())
+                result.add(output);
             return;
         }
 
-        findSubsequence(input.substring(1), input.substring(0, 1) + output);
+        findSubsequence(input.substring(1), input.charAt(0) + output);
         findSubsequence(input.substring(1), output);
     }
 
@@ -19,7 +20,7 @@ public class SubsequencesOfString {
         String str = "abc";
         findSubsequence(str, "");
 
-        Collections.sort(result);
+        //Collections.sort(result);
         System.out.println(result);
         System.out.println("Size of array: " + result.size());
     }

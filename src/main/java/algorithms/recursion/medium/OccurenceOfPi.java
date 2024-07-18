@@ -7,7 +7,7 @@ public class OccurenceOfPi {
         if (str.length() <= 1)
             return str;
 
-        if (str.substring(0, 2).equals("pi"))
+        if (str.startsWith("pi"))
             return "3.14" + piWithRecursion(str.substring(2));
 
         return str.charAt(0) + piWithRecursion(str.substring(1));
@@ -18,12 +18,12 @@ public class OccurenceOfPi {
         StringBuilder sb = new StringBuilder();
 
         for (int i=0; i<str.length(); i++){
-            if(i+2 <= str.length() && str.substring(i, i+2).equals("pi")){
+            if(i+2 <= str.length() && str.startsWith("pi", i)){
                 sb.append("3.14");
                 i++;
             }
             else {
-                sb.append(str.substring(i, i + 1));
+                sb.append(str.charAt(i));
             }
         }
 
