@@ -1,4 +1,4 @@
-package gfg.interviews.morganstanley;
+package interviews.morganstanley;
 
 import java.util.*;
 
