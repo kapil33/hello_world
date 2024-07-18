@@ -1,4 +1,4 @@
-package gfg.interviews.ongrid;
+package interviews.ongrid;
 
 public class Operations {
     /*

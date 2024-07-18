@@ -1,4 +1,4 @@
-package gfg.interviews.flipkart;
+package interviews.flipkart;
 
 public class MatrixTraversal {
     /*Problem Statement: given a binary matrix, count the number of non-boundary 1s which are not directly or indirectly reachable from boundary 1s

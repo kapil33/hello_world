@@ -1,4 +1,4 @@
-package gfg.interviews.dpworld;
+package interviews.dpworld;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package gfg.interviews.ongrid;
+package interviews.ongrid;
 
 public class APIContract {
     /*API Contract for consumer producer network

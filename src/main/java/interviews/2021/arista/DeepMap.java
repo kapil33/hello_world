@@ -1,4 +1,4 @@
-package gfg.interviews.arista;
+package interviews.arista;
 
 /*
 Below is the data structure question: convert a flat map(given as a list of string) into a deep map.

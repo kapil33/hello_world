@@ -1,4 +1,4 @@
-package gfg.interviews.arista;
+package interviews.arista;
 
 class Node{
     int val;

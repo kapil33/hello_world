@@ -1,4 +1,4 @@
-package gfg.interviews.enthire;
+package interviews.enthire;
 
 public class MaximizeZeros {
     /*

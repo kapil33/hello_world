@@ -1,4 +1,4 @@
-package gfg.interviews.ongrid;
+package interviews.ongrid;
 
 public class SmallestPositiveNumber {
     /*Problem Statement: given an integer array consisting of +ve and -ve numbers.

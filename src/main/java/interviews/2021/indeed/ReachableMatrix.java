@@ -1,4 +1,4 @@
-package gfg.interviews.indeed;
+package interviews.indeed;
 
 import javafx.util.Pair;
 

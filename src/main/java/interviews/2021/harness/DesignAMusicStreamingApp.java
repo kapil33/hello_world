@@ -1,4 +1,4 @@
-package gfg.interviews.harness;
+package interviews.harness;
 
 public class DesignAMusicStreamingApp {
 }

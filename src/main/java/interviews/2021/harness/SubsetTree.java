@@ -1,4 +1,4 @@
-package gfg.interviews.harness;
+package interviews.harness;
 
 public class SubsetTree {
     /*Problem Statement: there are 2 trees T1 & T2, T1 is very very big and T2 is very small.

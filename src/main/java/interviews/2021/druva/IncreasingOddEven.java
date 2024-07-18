@@ -1,4 +1,4 @@
-package gfg.interviews.druva;
+package interviews.druva;
 
 import java.util.Arrays;
 

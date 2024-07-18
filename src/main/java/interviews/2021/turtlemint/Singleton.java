@@ -1,4 +1,4 @@
-package gfg.interviews.turtlemint;
+package interviews.turtlemint;
 
 public class Singleton {
     int singleVar;

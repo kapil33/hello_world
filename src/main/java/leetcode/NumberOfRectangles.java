@@ -44,8 +44,8 @@ matrix = [
         int rows = grid.length, cols = grid[0].length;
         List<List<Integer>> result = new ArrayList<>();
         boolean[][] visited = new boolean[rows][cols];
-        for (int i = 0; i < rows; i++)
-            Arrays.fill(visited[i], false);
+        /*for (int i = 0; i < rows; i++)
+            Arrays.fill(visited[i], false);*/
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
@@ -64,12 +64,18 @@ matrix = [
     }
 
     public static void main(String[] args) {
-        char[][] arr = new char[][]{
+        /*char[][] arr = new char[][]{
                 {'0', '1', '1', '1', '1'},
                 {'1', '1', '0', '0', '1'},
                 {'0', '1', '0', '0', '1'},
                 {'0', '1', '1', '1', '1'},
-                {'1', '0', '1', '1', '1'}};
+                {'1', '0', '1', '1', '1'}};*/
+
+        char[][] arr = new char[][]{
+                {'1', '1', '1', '1', '1'},
+                {'1', '1', '0', '0', '1'},
+                {'1', '1', '0', '0', '1'},
+                {'1', '1', '1', '1', '1'}};
         NumberOfRectangles numberOfRectangles = new NumberOfRectangles();
         System.out.println(numberOfRectangles.findRectanlges(arr));
     }

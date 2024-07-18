@@ -1,4 +1,4 @@
-package gfg.interviews.turtlemint;
+package interviews.turtlemint;
 
 import java.util.ArrayList;
 import java.util.HashMap;

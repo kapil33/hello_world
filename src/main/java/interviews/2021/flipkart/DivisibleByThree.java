@@ -1,4 +1,4 @@
-package gfg.interviews.flipkart;
+package interviews.flipkart;
 
 public class DivisibleByThree {
     /*Problem Statement: given an integer string, you can change one integer at an index to values [0,9] keeping other indices same.

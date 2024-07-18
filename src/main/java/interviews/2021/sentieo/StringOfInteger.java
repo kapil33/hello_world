@@ -1,4 +1,4 @@
-package gfg.interviews.sentieo;
+package interviews.sentieo;
 
 public class StringOfInteger {
     /*Problem Statement: given a string of integers and index, in which all integers are present in ascending order.
