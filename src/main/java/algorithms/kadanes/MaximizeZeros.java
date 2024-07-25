@@ -109,11 +109,6 @@ public class MaximizeZeros {
                 nums[i] = -1;
             }
 
-            /*currMax += nums[i];
-            if (maxDiff < currMax)
-                maxDiff = currMax;
-            if (currMax < 0)
-                currMax = 0;*/
             currMax = Math.max(nums[i], currMax+nums[i]);
             maxDiff = Math.max(maxDiff, currMax);
         }
@@ -124,10 +119,44 @@ public class MaximizeZeros {
         return zeros + maxDiff;
     }
 
+    /*time complexity: O(n)*/
+    public static int maximizeZeros5(int[] nums) {
+        if (nums.length == 0)
+            return 0;
+        if (nums.length == 1)
+            return 1;
+
+        int zeros=0, maxDiff=Integer.MIN_VALUE, currMax=0;
+
+        for (int i=0; i<nums.length; i++) {
+            if (nums[i] == 0) {
+                zeros++;
+                nums[i] = -1;
+            }
+
+            currMax += nums[i];
+            if (maxDiff < currMax)
+                maxDiff = currMax;
+            if (currMax < 0)
+                currMax = 0;
+        }
+        /*in case if array do not have 1s*/
+        maxDiff = Math.max(0, maxDiff);
+
+        return zeros + maxDiff;
+    }
+
     public static void main(String[] args){
         System.out.println("Maximum zeros are: " + maximizeZeros4(new int[]{0, 1, 0, 0, 1, 1, 0}));
         System.out.println("Maximum zeros are: " + maximizeZeros4(new int[]{1, 1, 1, 1, 1, 1, 1}));
         System.out.println("Maximum zeros are: " + maximizeZeros4(new int[]{0, 0, 0, 1, 0, 1}));
         System.out.println("Maximum zeros are: " + maximizeZeros4(new int[]{0, 0, 0, 0, 0, 0}));
+
+        System.out.println("\n***********\n");
+
+        System.out.println("Maximum zeros are: " + maximizeZeros5(new int[]{0, 1, 0, 0, 1, 1, 0}));
+        System.out.println("Maximum zeros are: " + maximizeZeros5(new int[]{1, 1, 1, 1, 1, 1, 1}));
+        System.out.println("Maximum zeros are: " + maximizeZeros5(new int[]{0, 0, 0, 1, 0, 1}));
+        System.out.println("Maximum zeros are: " + maximizeZeros5(new int[]{0, 0, 0, 0, 0, 0}));
     }
 }
