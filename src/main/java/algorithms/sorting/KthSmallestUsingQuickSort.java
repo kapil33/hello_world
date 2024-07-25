@@ -24,9 +24,9 @@ public class KthSmallestUsingQuickSort {
         if (k > 0 && k <= end-start+1){
             int pivot = partition(nums, start, end);
 
-            if (pivot-start == k-1)
+            if (k == pivot-start+1)
                 return nums[pivot];
-            else if (pivot-start > k-1)
+            else if (k < pivot-start+1)
                 return KthSmallest(nums, start, pivot-1, k);
             else
                 return KthSmallest(nums, pivot+1, end, k-(pivot-start+1));
