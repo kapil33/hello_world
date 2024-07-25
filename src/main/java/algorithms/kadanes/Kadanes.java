@@ -52,17 +52,44 @@ public class Kadanes {
         return new int[]{p1, p2};
     }
 
+    private int[] implementation4(int[] nums) {
+        int maxSum=Integer.MIN_VALUE, currSum=0;
+        int[] res = new int[2];
+        int p1=0, p2=0;
+
+        for (int i=0; i<nums.length; i++) {
+            currSum += nums[i];
+
+            if (maxSum < currSum) {
+                maxSum = currSum;
+                p2=i;
+                res = new int[]{p1, p2};
+            }
+            if (currSum < 0) {
+                currSum = 0;
+                p1 = i+1;
+            }
+        }
+
+        return res;
+    }
+
     public static void main(String[] args){
         Kadanes kd = new Kadanes();
         int[] nums1 = new int[]{-2, -3, 4, -1, -2, 1, 5, -3};
         int[] nums2 = new int[]{-3, -1, -2, -3, -5};
 
-        int ans = kd.implementation1(nums2);
-        System.out.println("Result using implementation1 is: " + ans);
+        System.out.println("Result using impl1 is: " + kd.implementation1(nums1));
+        System.out.println("Result using impl1 is: " + kd.implementation1(nums2));
 
 
-        System.out.println("Result using implementation2 is: " + kd.implementation2(nums1));
+        System.out.println("Result using impl2 is: " + kd.implementation2(nums1));
+        System.out.println("Result using impl2 is: " + kd.implementation2(nums2));
 
-        System.out.println("Largest sum contiguous array indices are: " + Arrays.toString(kd.implementation3(nums1)));
+        System.out.println("Largest sum contiguous array indices using impl3 are: " + Arrays.toString(kd.implementation3(nums1)));
+        System.out.println("Largest sum contiguous array indices using impl3 are: " + Arrays.toString(kd.implementation3(nums2)));
+
+        System.out.println("Largest sum contiguous array indices using impl4 are: " + Arrays.toString(kd.implementation4(nums1)));
+        System.out.println("Largest sum contiguous array indices using impl4 are: " + Arrays.toString(kd.implementation4(nums2)));
     }
 }
