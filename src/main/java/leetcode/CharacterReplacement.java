@@ -28,6 +28,7 @@ public class CharacterReplacement {
         CharacterReplacement cr = new CharacterReplacement();
         System.out.println("Result is: " + cr.characterReplacement("ABBB", 2));
         System.out.println("Result is: " + cr.characterReplacement("ABBBA", 2));
+        System.out.println("Result is: " + cr.characterReplacement("AABABBA", 1));
     }
 
 }
