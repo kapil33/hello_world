@@ -1,5 +1,7 @@
 package interviews.harness;
 
+import algorithms.trees.TreeNode;
+
 public class SecondMinimumNumber {
     /*Problem Statement: given a tree which has below properties:
     * 1. every node = min(left child, right child)
@@ -23,39 +25,36 @@ public class SecondMinimumNumber {
      * Answer: -1
     * */
 
-    static int result;
+    static int secondMinimumNumber;
 
-    static class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        public TreeNode(int val){
-            this.val = val;
-        }
-        public TreeNode(int val, TreeNode left, TreeNode right){
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
+    public SecondMinimumNumber() {
+        secondMinimumNumber = Integer.MAX_VALUE;
     }
 
-    private static void secondMinimumNumber(TreeNode root){
+    private void getSecondMinimumNumber(TreeNode root){
         if (root == null || root.left == null || root.right == null
                 || (root.val == root.left.val && root.val == root.right.val))
             return;
         if (root.val == root.left.val){
-            if (result == -1 || result > root.right.val)
-                result = root.right.val;
-            secondMinimumNumber(root.left);
+            if (secondMinimumNumber > root.right.val)
+                secondMinimumNumber= root.right.val;
+            getSecondMinimumNumber(root.left);
         }else{
-            if (result == -1 || result > root.left.val)
-                result = root.left.val;
-            secondMinimumNumber(root.right);
+            if (secondMinimumNumber > root.left.val)
+                secondMinimumNumber= root.left.val;
+            getSecondMinimumNumber(root.right);
         }
     }
 
+    @Override
+    public String toString() {
+        if (secondMinimumNumber == Integer.MAX_VALUE)
+            return "Result is: " + -1;
+        else
+            return "Result is: " + secondMinimumNumber;
+    }
+
     public static void main(String[] args) {
-        result = -1;
         TreeNode root = new TreeNode(3);
         root.left = new TreeNode(3);
         root.right = new TreeNode(5);
@@ -63,22 +62,30 @@ public class SecondMinimumNumber {
         root.left.right = new TreeNode(4);
         root.right.right = new TreeNode(5);
         root.right.left = new TreeNode(6);
-        /*TreeNode root = new TreeNode(3);
+        SecondMinimumNumber smn = new SecondMinimumNumber();
+        smn.getSecondMinimumNumber(root);
+        System.out.println(smn);
+
+        root = new TreeNode(3);
         root.left = new TreeNode(3);
         root.right = new TreeNode(5);
         root.left.left = new TreeNode(3);
         root.left.right = new TreeNode(5);
         root.right.right = new TreeNode(5);
-        root.right.left = new TreeNode(6);*/
-        /*TreeNode root = new TreeNode(3);
+        root.right.left = new TreeNode(6);
+        smn = new SecondMinimumNumber();
+        smn.getSecondMinimumNumber(root);
+        System.out.println(smn);
+
+        root = new TreeNode(3);
         root.left = new TreeNode(3);
         root.right = new TreeNode(3);
         root.left.left = new TreeNode(3);
         root.left.right = new TreeNode(3);
         root.right.right = new TreeNode(3);
         root.right.left = new TreeNode(3);
-        secondMinimumNumber(root);*/
-        secondMinimumNumber(root);
-        System.out.println("Result is: " + result);
+        smn = new SecondMinimumNumber();
+        smn.getSecondMinimumNumber(root);
+        System.out.println(smn);
     }
 }
