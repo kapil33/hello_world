@@ -1,7 +1,8 @@
 package interviews.flipkart;
 
 public class MatrixTraversal {
-    /*Problem Statement: given a binary matrix, count the number of non-boundary 1s which are not directly or indirectly reachable from boundary 1s
+    /*Problem Statement: given a binary matrix, count the number of non-boundary 1s
+    which are not directly or indirectly reachable from boundary 1s
     * Example:
     * 1 0 0 0 0
     * 0 1 1 1 0
@@ -12,39 +13,41 @@ public class MatrixTraversal {
     * Count: 1 (1 at index [3,1] is not reachable from any boundary 1)
     * */
 
-    public static void trav(int[][] nums, int[][] reachable, int row, int col){
-        if (row < 0 || row >= nums.length || col < 0 || col >= nums[0].length)
+    public static void traverse(int[][] matrix, boolean[][] visited, int row, int column) {
+        if (row < 0 || row >= matrix.length || column < 0 || column >= matrix[row].length) {
             return;
-        if(nums[row][col] == 0 || reachable[row][col] == 1)
+        }
+        if (matrix[row][column] == 0 || visited[row][column]) {
             return;
-        reachable[row][col] = 1;
-        trav(nums, reachable, row-1, col);
-        trav(nums, reachable, row+1, col);
-        trav(nums,reachable, row, col-1);
-        trav(nums, reachable, row, col+1);
+        }
+
+        visited[row][column] = true;
+        traverse(matrix, visited, row+1, column);
+        traverse(matrix, visited, row, column+1);
+        traverse(matrix, visited, row-1, column);
+        traverse(matrix, visited, row, column-1);
     }
 
-    public static int count(int[][] nums, int[][] reachable){
-        int rows = nums.length, cols = nums[0].length;
-        for (int i=0; i<cols; i++){
-            //for 1st row
-            trav(nums, reachable, 0, i);
-            //for last row
-            trav(nums, reachable, rows-1, i);
-        }
-        for (int i=0; i<rows; i++){
-            //for 1st col
-            trav(nums, reachable, i, 0);
-            //for last col
-            trav(nums, reachable, i, cols-1);
-        }
-        int count = 0;
-        for (int i=1; i<rows-1; i++){
-            for (int j=1; j<cols-1; j++){
-                if (nums[i][j] == 1 && reachable[i][j] == 0)
-                    count++;
+    public static int countNonReachableOnes(int[][] matrix) {
+        boolean[][] visited = new boolean[matrix.length][matrix[0].length];
+
+        for (int i=0; i<matrix.length; i++) {
+            for (int j=0; j<matrix[i].length; j++) {
+                if (i==0 || i==matrix.length-1 || j==0 || j==matrix[i].length-1) {
+                    traverse(matrix, visited, i, j);
+                }
             }
         }
+
+        int count=0;
+        for (int i=0; i<matrix.length; i++) {
+            for (int j=0; j<matrix[i].length; j++) {
+                if (matrix[i][j] == 1 && !visited[i][j]) {
+                    count++;
+                }
+            }
+        }
+
         return count;
     }
 
@@ -75,7 +78,6 @@ public class MatrixTraversal {
                 {0,1,0,1,0},
                 {1,0,0,1,0}
         };*/
-        int[][] reachable = new int[inputMatrix.length][inputMatrix[0].length];
-        System.out.println(count(inputMatrix, reachable));
+        System.out.println(countNonReachableOnes(inputMatrix));
     }
 }
