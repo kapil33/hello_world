@@ -32,6 +32,8 @@ public class CheapestBankRoute implements BankRoute {
     The first route is cheaper but goes through 2 intermediary banks, the cheapest route going through no more
     than 1 intermediary is therefore the second one, with a cost of 70.
 
+    Better solution is at: https://leetcode.com/problems/cheapest-flights-within-k-stops/
+
     * */
 
     private final String source;
