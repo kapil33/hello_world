@@ -1,4 +1,4 @@
-package interviews.twentytwentyfour.truefoundry;
+package interviews.twentytwentyfour.truefoundry.employeereview;
 
 import javafx.util.Pair;
 

@@ -1,4 +1,4 @@
-package interviews.twentytwentyfour.truefoundry;
+package interviews.twentytwentyfour.truefoundry.employeereview;
 
 public class ReviewManager {
     public static void main(String[] args) {
