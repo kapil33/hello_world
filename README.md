@@ -1,3 +1,47 @@
+# Welcome to the ultimate guide to Software Engineering Interview Prep
+
+## DSA
+### Cover all the below-mentioned topics before appearing for any DSA round:
+- Sorting:
+  - algorithms/sorting
+  - algorithms/heaps
+- Binary Search
+  - algorithms/binarysearch
+  - https://leetcode.com/problem-list/mco0czkv/
+- Two Pointer: https://leetcode.com/problemset/?topicSlugs=two-pointers&page=1&status=AC
+- Tree:
+  - Morris Traversals: algorithms/trees
+- LRU Cache: 
+  - interviews/twentytwentyfour/truefoundry/PerformantLRUCache.java
+  - gfg/LRUCacheUsingDoublyLL.java
+- Union Find:
+  - Concept: https://yuminlee2.medium.com/union-find-algorithm-ffa9cd7d2dba
+  - Questions: https://leetcode.com/problem-list/mjqrceu6/
+- DP:
+  - Kadanes: algorithms/kadanes 
+  - Bounded knapsack: algorithms/dp/knapsack/bounded 
+  - Unbounded knapsack: algorithms/dp/knapsack/unbounded
+  - Leetcode:
+    - DP: https://leetcode.com/problem-list/5b4yszj5/
+    - Min Path: https://leetcode.com/problem-list/a0whwj3r/
+    - Distinct Ways: https://leetcode.com/problem-list/a0whiu0m/
+- BFS: https://leetcode.com/problem-list/ae112xpe/
+- DFS: https://leetcode.com/problem-list/aejlo6qc/
+- Previous interview questions:
+  - interviews/twentytwentyone
+  - interviews/twentytwentyfour
+- Graphs: refer below graph material
+
+
+## System Design or HLD
+- Resource: https://books.dwf.dev/docs/system-design/c0
+- Previous design round experiences: https://drive.google.com/drive/folders/1xWcT7pfzTsa4zALoGlCzoNkdmWTPlUyH
+
+## HM Round
+- Projects & behavioural questions: https://docs.google.com/document/d/1PfN_HdsHHDAYmDmrCW68uEN0pAESB4b6IaCZHWR6i2w/edit?tab=t.0#heading=h.bfpofn2ezxlz
+
+
+
 # World of Algorithms!
 This repo is dedicated to learn and practice algorithms.
 This repo is divided in following sections:
@@ -10,27 +54,25 @@ This repo is divided in following sections:
 Now lets talk about some specific Data Structures:
 
 # Graphs
-
 Important Graph algorithms:
-1. Dijkstra's Algorithm: 
-   2. It is a Single-Source-Shortest-Path algorithm, which means that it calculates shortest distance from one vertex to all the other vertices. 
-   3. Does not work for negative edge weights.
-   4. Good read: https://leetcode.com/discuss/general-discussion/1059477/A-noob's-guide-to-Djikstra's-Algorithm
-   5. Questions: https://leetcode.com/problem-list/mf5wgvxr/
-2. Union Find: 
-   3. This algo is used whenever you see any kind of grouping in the elements
-   4. It can only be applied to undirected graphs
-   5. Good read: https://yuminlee2.medium.com/union-find-algorithm-ffa9cd7d2dba
-   6. Questions: https://leetcode.com/problem-list/mjqrceu6/
-3. Topological Sort: 
-   4. It can only be applied on directed graphs and where there is some precedence of some tasks. For ex: T1->T2, task T1 should occur before task T2.
-   5. Good read: https://leetcode.com/discuss/general-discussion/1078072/introduction-to-topological-sort
-   6. Questions: https://leetcode.com/problem-list/mfu82mp1/
-4. Minimum Spanning Tree(MST): 
-   5. Prim's Algorithm and Kruskal's Algorithm
-   6. Good read: https://leetcode.com/discuss/study-guide/1131969/Minimum-Spanning-Tree-beginner's-guide
-   7. Questions: 
-      8. https://leetcode.com/problem-list/ahtyr1q2/
-      9. https://leetcode.com/tag/minimum-spanning-tree/
-      10. 
-5. 
+- Dijkstra's Algorithm:
+  - It is a Single-Source-Shortest-Path algorithm, which means that it calculates shortest distance from one vertex to all the other vertices. 
+  - Does not work for negative edge weights. 
+  - Good read: https://leetcode.com/discuss/general-discussion/1059477/A-noob's-guide-to-Djikstra's-Algorithm
+  - Questions: https://leetcode.com/problem-list/mf5wgvxr/
+- Union Find:
+  - This algo is used whenever you see any kind of grouping in the elements 
+  - It can only be applied to undirected graphs 
+  - Good read: https://yuminlee2.medium.com/union-find-algorithm-ffa9cd7d2dba
+  - Questions: https://leetcode.com/problem-list/mjqrceu6/
+- Topological Sort:
+  - It can only be applied on directed graphs and where there is some precedence of some tasks. For ex: T1->T2, task T1 should occur before task T2. 
+  - Good read: https://leetcode.com/discuss/general-discussion/1078072/introduction-to-topological-sort
+  - Questions: https://leetcode.com/problem-list/mfu82mp1/
+- Minimum Spanning Tree(MST):
+  - Prim's Algorithm and Kruskal's Algorithm 
+  - Good read: https://leetcode.com/discuss/study-guide/1131969/Minimum-Spanning-Tree-beginner's-guide
+  - Questions:
+    - https://leetcode.com/problem-list/ahtyr1q2/
+    - https://leetcode.com/tag/minimum-spanning-tree/
+- 

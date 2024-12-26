@@ -1,4 +1,4 @@
-package gfg;
+package algorithms.kadanes;
 
 public class KadanesMultiply {
 
