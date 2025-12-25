@@ -35,6 +35,7 @@
 
 ## System Design or HLD
 - Resource: https://books.dwf.dev/docs/system-design/c0
+  - https://www.hellointerview.com/
 - Previous design round experiences: https://drive.google.com/drive/folders/1xWcT7pfzTsa4zALoGlCzoNkdmWTPlUyH
 
 ## HM Round
@@ -75,4 +76,16 @@ Important Graph algorithms:
   - Questions:
     - https://leetcode.com/problem-list/ahtyr1q2/
     - https://leetcode.com/tag/minimum-spanning-tree/
-- 
+
+# Strategy for Atlassian
+DSA Round: do some research first 
+1. Prep top 30-40 question of DSA from https://www.hellointerview.com/
+2. Prep all the questions saved from your Leetcode account
+3. Prep all the questions from HelloWorld project in IntelliJ
+
+Code Design Round: do some research first
+1. Write complete logic for snake game
+2. Practice and revise from Flipkart's machine coding round.
+3. 
+
+Systems Design Round:

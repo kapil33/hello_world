@@ -8,7 +8,7 @@ public class PrintOneToN {
             return;
 
         System.out.println(nums);
-        print(nums-1);
+        print2(nums-1);
     }
 
 
